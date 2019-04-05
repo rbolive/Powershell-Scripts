@@ -5,7 +5,7 @@ Param ([string]$logstring)
 Add-content $Logfile -value $logstring
 }
 $maand = Get-Date -format MMMM
-$Logfile = "C:/Path/Here"
+$Logfile = "C:/Path/$maand-log.log"
 $date = get-date -format g
 $username = get-content ENV:username
 $computername = get-content ENV:computername
