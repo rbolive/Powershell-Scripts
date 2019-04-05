@@ -5,13 +5,13 @@ Param ([string]$logstring)
 Add-content $Logfile -value $logstring
 }
 $maand = Get-Date -format MMMM
-$Logfile = "C:/Prank/$maand-log.log"
+$Logfile = "C:/Path/Here"
 $date = get-date -format g
 $username = get-content ENV:username
 $computername = get-content ENV:computername
-$ipaddress = Get-NetIPAddress -IpAddress 145.*.*.* | Select-Object -ExpandProperty IPAddress
+$ipaddress = Get-NetIPAddress -IpAddress *.*.*.* | Select-Object -ExpandProperty IPAddress
 LogWrite "-----------------------------------------" LogWrite "Uitgelogd:"
-LogWrite "Gebruiker: $username"
+LogWrite "Userr: $username"
 LogWrite "Computer: $computername"
-LogWrite "Datum: $date"
+LogWrite "Date: $date"
 LogWrite "IP-Address: $ipaddress"
