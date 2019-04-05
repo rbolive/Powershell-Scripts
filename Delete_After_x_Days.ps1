@@ -1,4 +1,4 @@
-﻿$folder = "C:\Opdracht5"
+﻿$folder = "C:\Path\Here"
 $days = 10
 
 Get-ChildItem -Path $folder -Recurse -File | `
